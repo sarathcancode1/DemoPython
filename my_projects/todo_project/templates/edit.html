@@ -1,0 +1,21 @@
+
+{% extends 'base.html'%}
+{% block content %}
+
+<form method="POST" class="p-3 shadow">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                {% csrf_token %}
+                <div class="form-group">
+                <div class="alert alert-success" role="alert">
+                Update......!<a href="#" class="alert-link"></a>.
+                 </div>
+                    {{ form_key.as_p}}
+                </div>
+                <div class="form-group">
+                <button  class="btn btn-success" type="submit">Update</button>
+                </div>
+</form>
+
+{% endblock %}
